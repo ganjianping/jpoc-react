@@ -7,6 +7,7 @@ import FixedMenu from './header/FixedMenu';
 import DashboardPage from './dashboard';
 import UserPage from './user';
 import MuiForm from './features/MuiForm';
+import BrowserFingerprint from './other/BrowserFingerprint';
 
 const MuiNavigation = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -40,6 +41,7 @@ const MuiNavigation = () => {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/features/form" element={<MuiForm />} />
+          <Route path="/other/browser-fingerprint" element={<BrowserFingerprint />} />
         </Routes>
       </Box>
     </Box>

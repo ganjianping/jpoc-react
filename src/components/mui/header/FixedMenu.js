@@ -24,7 +24,8 @@ const FixedMenu = () => {
     {
       label: 'Showcase',
       subItems: [
-        { label: 'User', route: '/mui/header/user' }
+        { label: 'User', route: '/mui/header/user' },
+        { label: 'Browser Fingerprint', route: '/mui/header/other/browser-fingerprint' }
       ],
     },
     { label: 'logout', route: '/mui/login' }
