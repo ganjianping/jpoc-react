@@ -5,7 +5,7 @@ import CustomAppBar from './header/AppBar';
 import DrawerMenu from './header/DrawerMenu';
 import FixedMenu from './header/FixedMenu';
 import DashboardPage from './dashboard';
-import UserPage from './user';
+import UserList from './user/UserList';
 import MuiForm from './features/MuiForm';
 import BrowserFingerprint from './other/BrowserFingerprint';
 
@@ -39,7 +39,7 @@ const MuiNavigation = () => {
       >
         <Routes>
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/user" element={<UserPage />} />
+          <Route path="/user" element={<UserList />} />
           <Route path="/features/form" element={<MuiForm />} />
           <Route path="/other/browser-fingerprint" element={<BrowserFingerprint />} />
         </Routes>

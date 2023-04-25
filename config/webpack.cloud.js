@@ -12,11 +12,20 @@ module.exports = merge(common, {
     new BundleAnalyzerPlugin(),
   ],
   devServer: {
+    proxy: {
+      '/spring/web': {
+        target: 'https://jpoc-api.ganjianping.com',
+        changeOrigin: true,
+        secure: false
+      },
+    },
     static: {
       directory: path.join(__dirname, "..", "dist"),
     },
     compress: true,
-    port: 3001,
+    port: 3000,
     open: true,
+    hot: true,
+    historyApiFallback: true,
   },
 });

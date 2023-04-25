@@ -10,6 +10,14 @@ module.exports = merge(common, {
     })
   ],
   devServer: {
+    proxy: {
+      '/spring/web': {
+        target: 'http://localhost:8081',
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: { '^/v1': '/v1' },
+      },
+    },
     static: {
       directory: path.join(__dirname, "..", "dist"),
     },

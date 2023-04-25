@@ -1,5 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const env = require('../../dotenv/env')
+const webpack = require('webpack')
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next])
+  return prev
+}, {})
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,7 +22,7 @@ module.exports = {
     },
   },
   performance: {
-    hints: process.env.NODE_ENV === "production" ? "warning" : false,
+    hints: process.env.NODE_ENV === "prod" ? "warning" : false,
     maxAssetSize: 50000, 
     maxEntrypointSize: 50000, 
   },
@@ -53,5 +60,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new webpack.DefinePlugin(envKeys)
   ],
 };

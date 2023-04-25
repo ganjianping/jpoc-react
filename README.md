@@ -20,10 +20,12 @@ npm init -y
 
 ### Install Dependencies: 
 
-- yarn add react react-dom react-router-dom
+- yarn add react react-dom react-router-dom axios
 - yarn add --save dotenv dotenv-webpack
 - yarn add redux react-redux @reduxjs/toolkit
-- yarn add @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/styles
+- yarn add @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/styles @mui/x-data-grid
+
+
 
 ## How to run & build the project
 
